@@ -1,0 +1,1473 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Anam Dalawar - Premier Physiotherapy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;family=Cormorant+Garamond:wght@600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0a0e27;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Animated Background */
+    .animated-bg-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      overflow: hidden;
+    }
+
+    .animated-bg-container::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 14, 39, 0.5);
+      z-index: 1;
+    }
+
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      animation: float-orb 25s infinite ease-in-out;
+      opacity: 0.3;
+    }
+
+    .orb-1 {
+      width: 500px;
+      height: 500px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      top: -10%;
+      left: -10%;
+      animation-delay: 0s;
+    }
+
+    .orb-2 {
+      width: 600px;
+      height: 600px;
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      top: 40%;
+      right: -15%;
+      animation-delay: 8s;
+    }
+
+    .orb-3 {
+      width: 450px;
+      height: 450px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      bottom: -10%;
+      left: 20%;
+      animation-delay: 15s;
+    }
+
+    .orb-4 {
+      width: 550px;
+      height: 550px;
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      top: 60%;
+      left: 50%;
+      animation-delay: 5s;
+    }
+
+    .orb-5 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+      top: 20%;
+      right: 30%;
+      animation-delay: 12s;
+    }
+
+    @keyframes float-orb {
+      0%, 100% {
+        transform: translate(0, 0) scale(1);
+      }
+      25% {
+        transform: translate(100px, -100px) scale(1.2);
+      }
+      50% {
+        transform: translate(-80px, 80px) scale(0.8);
+      }
+      75% {
+        transform: translate(120px, 100px) scale(1.1);
+      }
+    }
+
+    /* Particle Animation */
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: particle-float 20s infinite linear;
+    }
+
+    @keyframes particle-float {
+      0% {
+        transform: translateY(100%) translateX(0) scale(0);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-100%) translateX(100px) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* Glass morphism */
+    .glass-morphism {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    }
+
+    .glass-card {
+      background: linear-gradient(135deg, rgba(15, 20, 50, 0.85) 0%, rgba(10, 14, 39, 0.9) 100%);
+      backdrop-filter: blur(20px);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.7s ease;
+    }
+
+    .glass-card:hover::before {
+      left: 100%;
+    }
+
+    .glass-card:hover {
+      transform: translateY(-12px) scale(1.02);
+      border-color: rgba(255, 215, 0, 0.4);
+      box-shadow: 0 25px 80px rgba(255, 215, 0, 0.2), 0 0 50px rgba(147, 112, 219, 0.3);
+    }
+
+    /* Golden gradient logo */
+    .logo-text {
+      background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s infinite;
+      background-size: 200% auto;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 0% center; }
+      50% { background-position: 100% center; }
+      100% { background-position: 0% center; }
+    }
+
+    .logo-icon {
+      filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+      animation: pulse-glow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+        transform: scale(1);
+      }
+      50% {
+        filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.9));
+        transform: scale(1.05);
+      }
+    }
+
+    /* Gradient button with animation */
+    .gradient-button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      border: 2px solid transparent;
+    }
+
+    .gradient-button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+    }
+
+    .gradient-button:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .gradient-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.5);
+      border-color: rgba(255, 215, 0, 0.5);
+    }
+
+    .gradient-button-secondary {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .gradient-button-secondary:hover {
+      box-shadow: 0 20px 60px rgba(240, 147, 251, 0.5);
+    }
+
+    /* Scroll animations */
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in-left {
+      opacity: 0;
+      transform: translateX(-60px);
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-left.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .fade-in-right {
+      opacity: 0;
+      transform: translateX(60px);
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Gradient text */
+    .gradient-text-purple {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-text-pink {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-text-cyan {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .gradient-text-green {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Service icon animations */
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      border-radius: 20px;
+      margin: 0 auto 24px;
+      font-size: 40px;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    }
+
+    .glass-card:hover .service-icon {
+      transform: scale(1.15) rotate(10deg);
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%);
+      box-shadow: 0 15px 50px rgba(102, 126, 234, 0.5);
+    }
+
+    /* Stats counter */
+    .stat-number {
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+
+    /* Process timeline */
+    .timeline-line {
+      position: absolute;
+      left: 22px;
+      top: 50px;
+      bottom: -30px;
+      width: 3px;
+      background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+      opacity: 0.5;
+    }
+
+    .process-step {
+      position: relative;
+      padding-left: 80px;
+      margin-bottom: 50px;
+    }
+
+    .process-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 24px;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+      animation: pulse-ring 2s infinite;
+      z-index: 1;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 20px rgba(102, 126, 234, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+      }
+    }
+
+    /* Testimonial cards */
+    .testimonial-card {
+      background: linear-gradient(135deg, rgba(15, 20, 50, 0.85) 0%, rgba(10, 14, 39, 0.9) 100%);
+      backdrop-filter: blur(15px);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 32px;
+      transition: all 0.5s ease;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 215, 0, 0.3);
+      box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+    }
+
+    /* FAQ Accordion */
+    .accordion-button {
+      background: linear-gradient(135deg, rgba(15, 20, 50, 0.85) 0%, rgba(10, 14, 39, 0.9) 100%);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 24px;
+      width: 100%;
+      text-align: left;
+      color: #ffffff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    }
+
+    .accordion-button::after {
+      content: '+';
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 28px;
+      transition: transform 0.3s ease;
+      color: #ffd700;
+    }
+
+    .accordion-button.active::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    .accordion-button:hover {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      border-color: rgba(255, 215, 0, 0.4);
+      box-shadow: 0 10px 40px rgba(102, 126, 234, 0.3);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, padding 0.5s ease;
+      color: rgba(255, 255, 255, 0.8);
+      padding: 0 24px;
+      margin-bottom: 16px;
+    }
+
+    .accordion-content.active {
+      max-height: 500px;
+      padding: 24px;
+      background: rgba(15, 20, 50, 0.7);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Social links */
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      border-radius: 16px;
+      transition: all 0.4s ease;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .social-link:hover {
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.5) 0%, rgba(118, 75, 162, 0.5) 100%);
+      transform: translateY(-5px) scale(1.1);
+      border-color: rgba(255, 215, 0, 0.5);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+    }
+
+    /* Navigation */
+    nav {
+      background: rgba(10, 14, 39, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.8);
+      transition: all 0.3s ease;
+      padding: 10px 20px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 60%;
+      height: 2px;
+      background: linear-gradient(90deg, #ffd700 0%, #ffed4e 100%);
+      transition: transform 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: #ffd700;
+    }
+
+    .nav-link:hover::after {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    /* Specialty badges */
+    .specialty-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 24px;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
+      border: 2px solid rgba(255, 215, 0, 0.3);
+      border-radius: 50px;
+      font-weight: 600;
+      margin: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .specialty-badge:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.4) 0%, rgba(118, 75, 162, 0.4) 100%);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    }
+
+    /* Floating animation for hero elements */
+    @keyframes float-hero {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .float-animation {
+      animation: float-hero 6s infinite ease-in-out;
+    }
+
+    /* Facility cards with hover effect */
+    .facility-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .facility-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.3) 0%, rgba(118, 75, 162, 0.3) 100%);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .facility-card:hover::before {
+      opacity: 1;
+    }
+
+    .section-container {
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .stat-number {
+        font-size: 2.5rem;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .orb-1, .orb-2, .orb-3, .orb-4, .orb-5 {
+        width: 250px;
+        height: 250px;
+      }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full">
+  <div class="w-full h-full overflow-auto"><!-- Animated Background -->
+   <div class="animated-bg-container">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+    <div class="gradient-orb orb-4"></div>
+    <div class="gradient-orb orb-5"></div><!-- Particles -->
+    <div id="particles-container"></div>
+   </div><!-- Navigation -->
+   <nav class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-5">
+     <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-3"><!-- Golden Logo Icon -->
+       <svg class="logo-icon w-12 h-12" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="url(#gold-gradient)" stroke-width="3" /> <path d="M32 12 L32 32 L48 40" stroke="url(#gold-gradient)" stroke-width="3" stroke-linecap="round" /> <circle cx="32" cy="32" r="4" fill="url(#gold-gradient)" /> <defs>
+         <lineargradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+         </lineargradient>
+        </defs>
+       </svg>
+       <div>
+        <div class="text-2xl font-bold logo-text">
+         Dr. Anam Dalawar
+        </div>
+        <div class="text-xs text-gray-400 font-medium">
+         Physical Therapy Excellence
+        </div>
+       </div>
+      </div>
+      <div class="hidden md:flex space-x-2"><a href="#home" class="nav-link">Home</a> <a href="#about" class="nav-link">About</a> <a href="#services" class="nav-link">Services</a> <a href="#expertise" class="nav-link">Expertise</a> <a href="#testimonials" class="nav-link">Reviews</a> <a href="#contact" class="nav-link">Contact</a>
+      </div><a href="#contact" class="gradient-button text-white px-7 py-3 rounded-full font-semibold text-sm shadow-lg"> Book Consultation </a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section id="home" class="section-container min-h-screen flex items-center justify-center px-6 pt-32 pb-20">
+    <div class="max-w-7xl mx-auto text-center">
+     <div class="fade-in-up visible">
+      <div class="inline-block mb-6 float-animation"><span class="specialty-badge">🏥 Premium Physiotherapy Care</span>
+      </div>
+      <h1 id="hero-headline" class="hero-title text-6xl md:text-8xl font-bold mb-6 leading-tight">Transform Your<br><span class="gradient-text-purple">Health Journey</span></h1>
+      <p id="hero-subheadline" class="text-2xl md:text-3xl text-gray-300 mb-6 font-medium">Expert Physiotherapy Care in Lahore</p>
+      <p class="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">CEO &amp; Head of Valencia Health Clinic | Specialized in Musculoskeletal Rehabilitation, Sports Injury Recovery &amp; Advanced Pain Management Techniques</p>
+      <div class="flex flex-col sm:flex-row gap-5 justify-center mb-16"><a href="#contact" id="cta-button" class="gradient-button text-white px-10 py-5 rounded-full font-bold text-lg inline-block shadow-2xl"> Book Your Session </a> <a href="#services" class="gradient-button-secondary text-white px-10 py-5 rounded-full font-bold text-lg inline-block shadow-2xl"> Explore Services </a>
+      </div><!-- Specialty Badges -->
+      <div class="flex flex-wrap justify-center gap-3 mb-12"><span class="specialty-badge">💪 Sports Rehab</span> <span class="specialty-badge">🦴 Musculoskeletal</span> <span class="specialty-badge">⚕️ Pain Management</span> <span class="specialty-badge">🏃 Post-Injury Recovery</span>
+      </div>
+     </div><!-- Stats -->
+     <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto">
+      <div class="glass-card p-8 scale-in">
+       <div class="stat-number">
+        1000+
+       </div>
+       <p class="text-gray-300 mt-3 font-semibold text-lg">Patients Treated</p>
+       <p class="text-gray-500 text-sm mt-1">Successfully recovered</p>
+      </div>
+      <div class="glass-card p-8 scale-in">
+       <div class="stat-number">
+        12+
+       </div>
+       <p class="text-gray-300 mt-3 font-semibold text-lg">Years Experience</p>
+       <p class="text-gray-500 text-sm mt-1">In clinical practice</p>
+      </div>
+      <div class="glass-card p-8 scale-in">
+       <div class="stat-number">
+        98%
+       </div>
+       <p class="text-gray-300 mt-3 font-semibold text-lg">Success Rate</p>
+       <p class="text-gray-500 text-sm mt-1">Patient satisfaction</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="section-container py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 id="about-headline" class="text-5xl md:text-7xl font-bold mb-6">Meet Your <span class="gradient-text-pink">Specialist</span></h2>
+      <p id="about-tagline" class="text-2xl text-gray-300 font-medium">Excellence in Patient Care</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="glass-card p-10 fade-in-left">
+       <div class="text-8xl mb-8 text-center">
+        👩‍⚕️
+       </div>
+       <h3 class="text-3xl font-bold mb-6 gradient-text-cyan text-center">Dr. Anam Dalawar, DPT</h3>
+       <p class="text-gray-300 mb-8 leading-relaxed text-lg">As CEO and Head Physiotherapist at Valencia Health Clinic, Dr. Anam brings over a decade of specialized experience in transforming lives through evidence-based rehabilitation. Her patient-first approach combines cutting-edge techniques with compassionate care.</p>
+       <div class="space-y-4">
+        <div class="flex items-center p-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-transparent border-l-4 border-purple-500"><span class="text-3xl mr-4">🎯</span>
+         <div>
+          <div class="font-bold text-lg">
+           Holistic Treatment Approach
+          </div>
+          <div class="text-gray-400 text-sm">
+           Personalized care for complete recovery
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center p-4 rounded-xl bg-gradient-to-r from-pink-500/10 to-transparent border-l-4 border-pink-500"><span class="text-3xl mr-4">🏆</span>
+         <div>
+          <div class="font-bold text-lg">
+           Advanced Certifications
+          </div>
+          <div class="text-gray-400 text-sm">
+           Specialized in sports and orthopedic rehab
+          </div>
+         </div>
+        </div>
+        <div class="flex items-center p-4 rounded-xl bg-gradient-to-r from-cyan-500/10 to-transparent border-l-4 border-cyan-500"><span class="text-3xl mr-4">💡</span>
+         <div>
+          <div class="font-bold text-lg">
+           Evidence-Based Methods
+          </div>
+          <div class="text-gray-400 text-sm">
+           Latest research-backed techniques
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="fade-in-right space-y-6">
+       <div class="glass-card p-8">
+        <h4 class="text-2xl font-bold gradient-text-purple mb-6">Professional Journey</h4>
+        <div class="space-y-4">
+         <div class="border-l-4 border-purple-500 pl-6 py-2">
+          <div class="font-bold text-lg text-gray-200">
+           CEO &amp; Head Physiotherapist
+          </div>
+          <div class="text-gray-400">
+           Valencia Health Clinic
+          </div>
+         </div>
+         <div class="border-l-4 border-pink-500 pl-6 py-2">
+          <div class="font-bold text-lg text-gray-200">
+           Senior Physical Therapist
+          </div>
+          <div class="text-gray-400">
+           Sehat Medical Complex (UOL)
+          </div>
+         </div>
+         <div class="border-l-4 border-cyan-500 pl-6 py-2">
+          <div class="font-bold text-lg text-gray-200">
+           Doctor of Physical Therapy (DPT)
+          </div>
+          <div class="text-gray-400">
+           Jinnah Hospital, Lahore
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="glass-card p-8">
+        <h4 class="text-2xl font-bold gradient-text-pink mb-6">Academic Excellence</h4>
+        <div class="space-y-3 text-gray-300">
+         <div class="flex items-center"><span class="text-2xl mr-4">🎓</span>
+          <div>
+           <div class="font-semibold">
+            GC University (GCUF)
+           </div>
+           <div class="text-sm text-gray-500">
+            Faisalabad
+           </div>
+          </div>
+         </div>
+         <div class="flex items-center"><span class="text-2xl mr-4">📚</span>
+          <div>
+           <div class="font-semibold">
+            Advanced Clinical Training
+           </div>
+           <div class="text-sm text-gray-500">
+            Multiple specializations
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="glass-card p-8">
+        <h4 class="text-2xl font-bold gradient-text-cyan mb-4" id="mission-title">Our Mission</h4>
+        <p class="text-gray-300 leading-relaxed" id="mission-text">Empowering patients through evidence-based care, personalized treatment plans, and a commitment to excellence in every aspect of rehabilitation and recovery.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="section-container py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">Specialized <span class="gradient-text-green">Services</span></h2>
+      <p class="text-2xl text-gray-300 font-medium">Comprehensive physiotherapy solutions for every need</p>
+     </div>
+     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="glass-card p-8 text-center fade-in-up">
+       <div class="service-icon">
+        🦴
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Musculoskeletal Rehabilitation</h3>
+       <p class="text-gray-300 leading-relaxed mb-4">Advanced treatment protocols for joint, muscle, and bone conditions. Restore mobility and build lasting strength.</p>
+       <div class="text-sm text-gray-500 space-y-1">
+        <div>
+         ✓ Joint mobility restoration
+        </div>
+        <div>
+         ✓ Muscle strengthening
+        </div>
+        <div>
+         ✓ Posture correction
+        </div>
+       </div>
+      </div>
+      <div class="glass-card p-8 text-center fade-in-up">
+       <div class="service-icon">
+        ⚽
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Sports Injury Recovery</h3>
+       <p class="text-gray-300 leading-relaxed mb-4">Specialized programs designed to return athletes to peak performance safely and efficiently.</p>
+       <div class="text-sm text-gray-500 space-y-1">
+        <div>
+         ✓ Performance optimization
+        </div>
+        <div>
+         ✓ Injury prevention
+        </div>
+        <div>
+         ✓ Sport-specific training
+        </div>
+       </div>
+      </div>
+      <div class="glass-card p-8 text-center fade-in-up">
+       <div class="service-icon">
+        💊
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Advanced Pain Management</h3>
+       <p class="text-gray-300 leading-relaxed mb-4">Cutting-edge techniques to manage chronic pain and dramatically improve quality of life.</p>
+       <div class="text-sm text-gray-500 space-y-1">
+        <div>
+         ✓ Chronic pain relief
+        </div>
+        <div>
+         ✓ Nerve pain treatment
+        </div>
+        <div>
+         ✓ Manual therapy
+        </div>
+       </div>
+      </div>
+      <div class="glass-card p-8 text-center fade-in-up">
+       <div class="service-icon">
+        🏃
+       </div>
+       <h3 class="text-2xl font-bold mb-4">Post-Injury Recovery</h3>
+       <p class="text-gray-300 leading-relaxed mb-4">Comprehensive rehabilitation programs to restore full function and prevent re-injury.</p>
+       <div class="text-sm text-gray-500 space-y-1">
+        <div>
+         ✓ Functional restoration
+        </div>
+        <div>
+         ✓ Mobility exercises
+        </div>
+        <div>
+         ✓ Progressive rehab
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Expertise Areas Section -->
+   <section id="expertise" class="section-container py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">Areas of <span class="gradient-text-purple">Expertise</span></h2>
+      <p class="text-2xl text-gray-300 font-medium">Specialized treatments for comprehensive care</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div class="glass-card p-8 fade-in-left">
+       <div class="text-5xl mb-6">
+        🔬
+       </div>
+       <h3 class="text-2xl font-bold mb-4 gradient-text-purple">Clinical Specializations</h3>
+       <ul class="space-y-3 text-gray-300">
+        <li class="flex items-start"><span class="text-purple-400 mr-3 mt-1">●</span> <span>Orthopedic Rehabilitation</span></li>
+        <li class="flex items-start"><span class="text-purple-400 mr-3 mt-1">●</span> <span>Neurological Physiotherapy</span></li>
+        <li class="flex items-start"><span class="text-purple-400 mr-3 mt-1">●</span> <span>Geriatric Care</span></li>
+        <li class="flex items-start"><span class="text-purple-400 mr-3 mt-1">●</span> <span>Pediatric Therapy</span></li>
+        <li class="flex items-start"><span class="text-purple-400 mr-3 mt-1">●</span> <span>Women's Health Physiotherapy</span></li>
+       </ul>
+      </div>
+      <div class="glass-card p-8 fade-in-up">
+       <div class="text-5xl mb-6">
+        🎯
+       </div>
+       <h3 class="text-2xl font-bold mb-4 gradient-text-pink">Treatment Conditions</h3>
+       <ul class="space-y-3 text-gray-300">
+        <li class="flex items-start"><span class="text-pink-400 mr-3 mt-1">●</span> <span>Back &amp; Neck Pain</span></li>
+        <li class="flex items-start"><span class="text-pink-400 mr-3 mt-1">●</span> <span>Arthritis Management</span></li>
+        <li class="flex items-start"><span class="text-pink-400 mr-3 mt-1">●</span> <span>Frozen Shoulder</span></li>
+        <li class="flex items-start"><span class="text-pink-400 mr-3 mt-1">●</span> <span>Sciatica &amp; Disc Issues</span></li>
+        <li class="flex items-start"><span class="text-pink-400 mr-3 mt-1">●</span> <span>Post-Surgical Recovery</span></li>
+       </ul>
+      </div>
+      <div class="glass-card p-8 fade-in-right">
+       <div class="text-5xl mb-6">
+        🏥
+       </div>
+       <h3 class="text-2xl font-bold mb-4 gradient-text-cyan">Advanced Techniques</h3>
+       <ul class="space-y-3 text-gray-300">
+        <li class="flex items-start"><span class="text-cyan-400 mr-3 mt-1">●</span> <span>Manual Therapy</span></li>
+        <li class="flex items-start"><span class="text-cyan-400 mr-3 mt-1">●</span> <span>Dry Needling</span></li>
+        <li class="flex items-start"><span class="text-cyan-400 mr-3 mt-1">●</span> <span>Therapeutic Exercises</span></li>
+        <li class="flex items-start"><span class="text-cyan-400 mr-3 mt-1">●</span> <span>Electrotherapy</span></li>
+        <li class="flex items-start"><span class="text-cyan-400 mr-3 mt-1">●</span> <span>Kinesiology Taping</span></li>
+       </ul>
+      </div>
+     </div>
+    </div>
+   </section><!-- Treatment Process Section -->
+   <section class="section-container py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">Treatment <span class="gradient-text-pink">Process</span></h2>
+      <p class="text-2xl text-gray-300 font-medium">Your journey to complete recovery</p>
+     </div>
+     <div class="glass-card p-12 relative">
+      <div class="timeline-line"></div>
+      <div class="process-step fade-in-left">
+       <div class="process-number">
+        1
+       </div>
+       <h3 class="text-2xl font-bold mb-3">Comprehensive Assessment</h3>
+       <p class="text-gray-300 leading-relaxed">Detailed evaluation of your condition using advanced diagnostic techniques. We analyze your medical history, current symptoms, and lifestyle factors to create a complete picture of your health status.</p>
+      </div>
+      <div class="process-step fade-in-right">
+       <div class="process-number">
+        2
+       </div>
+       <h3 class="text-2xl font-bold mb-3">Personalized Treatment Plan</h3>
+       <p class="text-gray-300 leading-relaxed">Custom-designed therapy protocols tailored to your specific needs and goals. We combine manual therapy, targeted exercises, and cutting-edge modalities for optimal results.</p>
+      </div>
+      <div class="process-step fade-in-left">
+       <div class="process-number">
+        3
+       </div>
+       <h3 class="text-2xl font-bold mb-3">Active Rehabilitation Phase</h3>
+       <p class="text-gray-300 leading-relaxed">Hands-on treatment sessions with continuous monitoring and adjustment. We focus on pain reduction, mobility restoration, and strength building with measurable progress tracking.</p>
+      </div>
+      <div class="process-step fade-in-right">
+       <div class="process-number">
+        4
+       </div>
+       <h3 class="text-2xl font-bold mb-3">Long-term Wellness</h3>
+       <p class="text-gray-300 leading-relaxed">Comprehensive maintenance strategies including home exercise programs, lifestyle modifications, and preventive care education to ensure lasting results and prevent recurrence.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Facilities Section -->
+   <section class="section-container py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">World-Class <span class="gradient-text-cyan">Facilities</span></h2>
+      <p class="text-2xl text-gray-300 font-medium">State-of-the-art equipment for superior care</p>
+     </div>
+     <div class="grid md:grid-cols-2 gap-10">
+      <div class="glass-card p-10 facility-card fade-in-left">
+       <div class="text-6xl mb-6">
+        🏥
+       </div>
+       <h3 class="text-3xl font-bold mb-4 gradient-text-purple">Valencia Health Clinic</h3>
+       <p class="text-gray-300 mb-6 leading-relaxed text-lg">Our flagship facility features modern rehabilitation equipment, private treatment rooms, and a welcoming environment designed for healing and recovery.</p>
+       <div class="space-y-3">
+        <div class="flex items-center text-gray-300"><span class="text-purple-400 mr-3">✦</span> <span>Advanced therapeutic equipment</span>
+        </div>
+        <div class="flex items-center text-gray-300"><span class="text-purple-400 mr-3">✦</span> <span>Private treatment suites</span>
+        </div>
+        <div class="flex items-center text-gray-300"><span class="text-purple-400 mr-3">✦</span> <span>Hygienic &amp; comfortable atmosphere</span>
+        </div>
+       </div>
+      </div>
+      <div class="glass-card p-10 facility-card fade-in-right">
+       <div class="text-6xl mb-6">
+        🏢
+       </div>
+       <h3 class="text-3xl font-bold mb-4 gradient-text-pink">Sehat Medical Complex</h3>
+       <p class="text-gray-300 mb-6 leading-relaxed text-lg">Located at UOL campus, our comprehensive medical facility provides integrated healthcare services with a full range of diagnostic and treatment capabilities.</p>
+       <div class="space-y-3">
+        <div class="flex items-center text-gray-300"><span class="text-pink-400 mr-3">✦</span> <span>Multidisciplinary approach</span>
+        </div>
+        <div class="flex items-center text-gray-300"><span class="text-pink-400 mr-3">✦</span> <span>On-site diagnostic services</span>
+        </div>
+        <div class="flex items-center text-gray-300"><span class="text-pink-400 mr-3">✦</span> <span>Convenient campus location</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- Testimonials Section -->
+   <section id="testimonials" class="section-container py-28 px-6">
+    <div class="max-w-7xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">Patient <span class="gradient-text-green">Success Stories</span></h2>
+      <p class="text-2xl text-gray-300 font-medium">Real transformations from real people</p>
+     </div>
+     <div class="grid md:grid-cols-3 gap-8">
+      <div class="testimonial-card fade-in-left">
+       <div class="flex items-center mb-6">
+        <div class="text-5xl mr-4">
+         👨
+        </div>
+        <div>
+         <h4 class="font-bold text-xl">Ahmed Khan</h4>
+         <div class="text-yellow-400 text-lg">
+          ★★★★★
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-300 leading-relaxed italic mb-4">"Dr. Anam transformed my recovery journey after a major sports injury. Her expertise, dedication, and personalized approach got me back to competitive football in record time. Truly exceptional care!"</p>
+       <div class="text-sm text-gray-500 font-semibold">
+        — Professional Athlete
+       </div>
+      </div>
+      <div class="testimonial-card fade-in-up">
+       <div class="flex items-center mb-6">
+        <div class="text-5xl mr-4">
+         👩
+        </div>
+        <div>
+         <h4 class="font-bold text-xl">Fatima Saeed</h4>
+         <div class="text-yellow-400 text-lg">
+          ★★★★★
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-300 leading-relaxed italic mb-4">"After struggling with chronic back pain for years, Dr. Anam's treatment plan finally gave me lasting relief. Her professionalism and genuine care made all the difference. Highly recommended!"</p>
+       <div class="text-sm text-gray-500 font-semibold">
+        — IT Professional
+       </div>
+      </div>
+      <div class="testimonial-card fade-in-right">
+       <div class="flex items-center mb-6">
+        <div class="text-5xl mr-4">
+         👨
+        </div>
+        <div>
+         <h4 class="font-bold text-xl">Hassan Malik</h4>
+         <div class="text-yellow-400 text-lg">
+          ★★★★★
+         </div>
+        </div>
+       </div>
+       <p class="text-gray-300 leading-relaxed italic mb-4">"Outstanding physiotherapist with a perfect blend of expertise and empathy. The clinic facilities are top-notch, and the results speak for themselves. I recovered faster than expected!"</p>
+       <div class="text-sm text-gray-500 font-semibold">
+        — Business Executive
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- FAQ Section -->
+   <section class="section-container py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+     <div class="text-center mb-20 fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">Common <span class="gradient-text-purple">Questions</span></h2>
+      <p class="text-2xl text-gray-300 font-medium">Everything you need to know about physiotherapy</p>
+     </div>
+     <div class="fade-in-up"><button class="accordion-button" data-faq="1"> <span>What conditions can physiotherapy treat?</span> </button>
+      <div class="accordion-content" data-faq-content="1">
+       We treat a comprehensive range of conditions including sports injuries, back and neck pain, post-surgical rehabilitation, arthritis, muscle strains, frozen shoulder, sciatica, disc problems, chronic pain conditions, and mobility issues. Each treatment plan is fully customized to your specific condition and recovery goals.
+      </div><button class="accordion-button" data-faq="2"> <span>How long does each treatment session last?</span> </button>
+      <div class="accordion-content" data-faq-content="2">
+       Typical treatment sessions last 45-60 minutes, allowing adequate time for hands-on therapy, exercises, and education. Initial assessment appointments may take 60-90 minutes to ensure we thoroughly understand your condition and create an optimal treatment plan.
+      </div><button class="accordion-button" data-faq="3"> <span>How many sessions will I need for recovery?</span> </button>
+      <div class="accordion-content" data-faq-content="3">
+       The number of sessions varies based on your specific condition, severity, and recovery goals. Most patients experience significant improvement within 6-12 sessions. We'll create a personalized timeline during your initial assessment and continuously adjust based on your progress.
+      </div><button class="accordion-button" data-faq="4"> <span>Do I need a doctor's referral to book an appointment?</span> </button>
+      <div class="accordion-content" data-faq-content="4">
+       No referral is required for most conditions. You can book directly with us for an initial consultation. However, some insurance plans may require a physician referral for coverage. We recommend checking with your insurance provider if you plan to use insurance benefits.
+      </div><button class="accordion-button" data-faq="5"> <span>What should I bring to my first appointment?</span> </button>
+      <div class="accordion-content" data-faq-content="5">
+       Please bring any relevant medical records, imaging results (X-rays, MRI, CT scans), a list of current medications, previous treatment history, and your insurance information if applicable. Wear comfortable, loose-fitting clothing that allows easy movement and access to the affected area.
+      </div><button class="accordion-button" data-faq="6"> <span>What makes your approach different from others?</span> </button>
+      <div class="accordion-content" data-faq-content="6">
+       Our approach combines evidence-based techniques with personalized care. We focus on treating the root cause rather than just symptoms, use advanced manual therapy techniques, provide comprehensive patient education, and create customized home exercise programs. Our commitment to continuous progress monitoring ensures optimal outcomes.
+      </div>
+     </div>
+    </div>
+   </section><!-- Social Media Section -->
+   <section class="section-container py-28 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+     <div class="fade-in-up">
+      <h2 class="text-5xl md:text-7xl font-bold mb-6">Stay <span class="gradient-text-pink">Connected</span></h2>
+      <p class="text-2xl text-gray-300 mb-12 font-medium">Follow for health tips, success stories, and wellness advice</p>
+      <div class="flex justify-center gap-8 mb-16"><a href="https://www.instagram.com/dr.anam_dalawar/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+        </svg></a> <a href="https://www.facebook.com/anam.dalawar.3/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+        <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+        </svg></a>
+      </div>
+      <div class="glass-card p-10 inline-block">
+       <p class="text-3xl font-bold mb-4 gradient-text-purple">Join Our Health Community</p>
+       <p class="text-gray-300 text-lg">Regular updates on physiotherapy, wellness tips, and patient success stories</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="section-container py-28 px-6">
+    <div class="max-w-5xl mx-auto text-center">
+     <div class="fade-in-up">
+      <h2 id="contact-headline" class="text-5xl md:text-7xl font-bold mb-6">Begin Your <span class="gradient-text-cyan">Healing Journey</span></h2>
+      <p class="text-2xl text-gray-300 mb-16 font-medium">Take the first step towards a pain-free, active life</p>
+      <div class="glass-card p-12 mb-12">
+       <div class="grid md:grid-cols-2 gap-12 text-left">
+        <div>
+         <h3 class="text-3xl font-bold gradient-text-purple mb-8">Valencia Health Clinic</h3>
+         <div class="space-y-5">
+          <div class="flex items-start p-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-transparent"><span class="text-3xl mr-4">📍</span>
+           <div>
+            <div class="font-bold text-lg mb-1">
+             Location
+            </div>
+            <div id="clinic-location" class="text-gray-300">
+             Sehat Medical Complex, Lahore
+            </div>
+           </div>
+          </div>
+          <div class="flex items-start p-4 rounded-xl bg-gradient-to-r from-pink-500/10 to-transparent"><span class="text-3xl mr-4">🇵🇰</span>
+           <div>
+            <div class="font-bold text-lg mb-1">
+             Country
+            </div>
+            <div class="text-gray-300">
+             Pakistan
+            </div>
+           </div>
+          </div>
+          <div class="flex items-start p-4 rounded-xl bg-gradient-to-r from-cyan-500/10 to-transparent"><span class="text-3xl mr-4">⏰</span>
+           <div>
+            <div class="font-bold text-lg mb-1">
+             Hours
+            </div>
+            <div class="text-gray-300">
+             Mon-Sat: 9:00 AM - 8:00 PM
+            </div>
+            <div class="text-gray-500 text-sm">
+             Sunday: By Appointment
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div>
+         <h3 class="text-3xl font-bold gradient-text-pink mb-8">Get In Touch</h3>
+         <div class="space-y-5">
+          <div class="flex items-start p-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-transparent"><span class="text-3xl mr-4">📱</span>
+           <div>
+            <div class="font-bold text-lg mb-1">
+             Contact
+            </div>
+            <div class="text-gray-300">
+             Message via social media
+            </div>
+           </div>
+          </div>
+          <div class="flex items-start p-4 rounded-xl bg-gradient-to-r from-pink-500/10 to-transparent"><span class="text-3xl mr-4">💬</span>
+           <div>
+            <div class="font-bold text-lg mb-1">
+             Appointments
+            </div>
+            <div class="text-gray-300">
+             DM for booking &amp; inquiries
+            </div>
+           </div>
+          </div>
+          <div class="flex items-start p-4 rounded-xl bg-gradient-to-r from-cyan-500/10 to-transparent"><span class="text-3xl mr-4">🩺</span>
+           <div>
+            <div class="font-bold text-lg mb-1">
+             Walk-ins
+            </div>
+            <div class="text-gray-300">
+             Welcome during clinic hours
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-6 justify-center"><a href="https://www.instagram.com/dr.anam_dalawar/" target="_blank" rel="noopener noreferrer" class="gradient-button text-white px-12 py-5 rounded-full font-bold text-xl inline-block shadow-2xl"> Book Appointment Now </a> <a href="#services" class="gradient-button-secondary text-white px-12 py-5 rounded-full font-bold text-xl inline-block shadow-2xl"> Explore Services </a>
+      </div>
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="section-container py-16 px-6 border-t-2 border-white/10">
+    <div class="max-w-7xl mx-auto">
+     <div class="flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center space-x-3 mb-6 md:mb-0">
+       <svg class="logo-icon w-10 h-10" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="url(#gold-gradient-footer)" stroke-width="3" /> <path d="M32 12 L32 32 L48 40" stroke="url(#gold-gradient-footer)" stroke-width="3" stroke-linecap="round" /> <circle cx="32" cy="32" r="4" fill="url(#gold-gradient-footer)" /> <defs>
+         <lineargradient id="gold-gradient-footer" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+         </lineargradient>
+        </defs>
+       </svg>
+       <div>
+        <div class="text-2xl font-bold logo-text">
+         Dr. Anam Dalawar
+        </div>
+        <div class="text-sm text-gray-400">
+         Physical Therapy Excellence
+        </div>
+       </div>
+      </div>
+      <div class="text-center md:text-right">
+       <p class="text-gray-400 mb-2">Expert Physiotherapy Care | Valencia Health Clinic</p>
+       <p class="text-gray-500 text-sm">© 2024 Dr. Anam Dalawar. All rights reserved.</p>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      hero_headline: "Transform Your Health Journey",
+      hero_subheadline: "Expert Physiotherapy Care in Lahore",
+      cta_button_text: "Book Your Session",
+      about_headline: "Meet Your Specialist",
+      about_tagline: "Excellence in Patient Care",
+      mission_title: "Our Mission",
+      mission_text: "Empowering patients through evidence-based care, personalized treatment plans, and a commitment to excellence in every aspect of rehabilitation and recovery.",
+      contact_headline: "Begin Your Healing Journey",
+      clinic_location: "Sehat Medical Complex, Lahore",
+      background_color: "#667eea",
+      surface_color: "#764ba2",
+      text_color: "#ffffff",
+      primary_action_color: "#f093fb",
+      accent_color: "#ffd700",
+      font_family: "Poppins",
+      font_size: 16
+    };
+
+    async function onConfigChange(config) {
+      const heroHeadline = document.getElementById('hero-headline');
+      const heroSubheadline = document.getElementById('hero-subheadline');
+      const ctaButton = document.getElementById('cta-button');
+      const aboutHeadline = document.getElementById('about-headline');
+      const aboutTagline = document.getElementById('about-tagline');
+      const missionTitle = document.getElementById('mission-title');
+      const missionText = document.getElementById('mission-text');
+      const contactHeadline = document.getElementById('contact-headline');
+      const clinicLocation = document.getElementById('clinic-location');
+
+      if (heroHeadline) heroHeadline.innerHTML = (config.hero_headline || defaultConfig.hero_headline).replace('Health Journey', '<span class="gradient-text-purple">Health Journey</span>');
+      if (heroSubheadline) heroSubheadline.textContent = config.hero_subheadline || defaultConfig.hero_subheadline;
+      if (ctaButton) ctaButton.textContent = config.cta_button_text || defaultConfig.cta_button_text;
+      if (aboutHeadline) aboutHeadline.innerHTML = (config.about_headline || defaultConfig.about_headline).replace('Specialist', '<span class="gradient-text-pink">Specialist</span>');
+      if (aboutTagline) aboutTagline.textContent = config.about_tagline || defaultConfig.about_tagline;
+      if (missionTitle) missionTitle.textContent = config.mission_title || defaultConfig.mission_title;
+      if (missionText) missionText.textContent = config.mission_text || defaultConfig.mission_text;
+      if (contactHeadline) contactHeadline.innerHTML = (config.contact_headline || defaultConfig.contact_headline).replace('Healing Journey', '<span class="gradient-text-cyan">Healing Journey</span>');
+      if (clinicLocation) clinicLocation.textContent = config.clinic_location || defaultConfig.clinic_location;
+
+      const customFont = config.font_family || defaultConfig.font_family;
+      const baseSize = config.font_size || defaultConfig.font_size;
+
+      document.body.style.fontFamily = `'${customFont}', sans-serif`;
+      document.body.style.fontSize = `${baseSize}px`;
+
+      document.querySelectorAll('h1, h2, h3').forEach(el => {
+        el.style.fontFamily = `'${customFont}', 'Cormorant Garamond', serif`;
+      });
+
+      document.querySelectorAll('h1').forEach(el => {
+        el.style.fontSize = `${baseSize * 3.5}px`;
+      });
+
+      document.querySelectorAll('h2').forEach(el => {
+        el.style.fontSize = `${baseSize * 3}px`;
+      });
+
+      document.querySelectorAll('h3').forEach(el => {
+        el.style.fontSize = `${baseSize * 1.5}px`;
+      });
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [
+          {
+            get: () => config.background_color || defaultConfig.background_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.surface_color || defaultConfig.surface_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.text_color || defaultConfig.text_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.primary_action_color || defaultConfig.primary_action_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.primary_action_color = value;
+                window.elementSdk.setConfig({ primary_action_color: value });
+              }
+            }
+          },
+          {
+            get: () => config.accent_color || defaultConfig.accent_color,
+            set: (value) => {
+              if (window.elementSdk) {
+                window.elementSdk.config.accent_color = value;
+                window.elementSdk.setConfig({ accent_color: value });
+              }
+            }
+          }
+        ],
+        borderables: [],
+        fontEditable: {
+          get: () => config.font_family || defaultConfig.font_family,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_family = value;
+              window.elementSdk.setConfig({ font_family: value });
+            }
+          }
+        },
+        fontSizeable: {
+          get: () => config.font_size || defaultConfig.font_size,
+          set: (value) => {
+            if (window.elementSdk) {
+              window.elementSdk.config.font_size = value;
+              window.elementSdk.setConfig({ font_size: value });
+            }
+          }
+        }
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["hero_headline", config.hero_headline || defaultConfig.hero_headline],
+        ["hero_subheadline", config.hero_subheadline || defaultConfig.hero_subheadline],
+        ["cta_button_text", config.cta_button_text || defaultConfig.cta_button_text],
+        ["about_headline", config.about_headline || defaultConfig.about_headline],
+        ["about_tagline", config.about_tagline || defaultConfig.about_tagline],
+        ["mission_title", config.mission_title || defaultConfig.mission_title],
+        ["mission_text", config.mission_text || defaultConfig.mission_text],
+        ["contact_headline", config.contact_headline || defaultConfig.contact_headline],
+        ["clinic_location", config.clinic_location || defaultConfig.clinic_location]
+      ]);
+    }
+
+    // Create particles
+    function createParticles() {
+      const container = document.getElementById('particles-container');
+      for (let i = 0; i < 50; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDelay = Math.random() * 20 + 's';
+        particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+        container.appendChild(particle);
+      }
+    }
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-up, .fade-in-left, .fade-in-right, .scale-in').forEach(el => {
+      observer.observe(el);
+    });
+
+    // FAQ Accordion
+    document.querySelectorAll('.accordion-button').forEach(button => {
+      button.addEventListener('click', () => {
+        const faqId = button.getAttribute('data-faq');
+        const content = document.querySelector(`[data-faq-content="${faqId}"]`);
+        const isActive = content.classList.contains('active');
+        
+        document.querySelectorAll('.accordion-content').forEach(item => {
+          item.classList.remove('active');
+        });
+        
+        document.querySelectorAll('.accordion-button').forEach(btn => {
+          btn.classList.remove('active');
+        });
+        
+        if (!isActive) {
+          content.classList.add('active');
+          button.classList.add('active');
+        }
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Initialize
+    createParticles();
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9bdf5432e11dc8f4',t:'MTc2ODQxNjczMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
