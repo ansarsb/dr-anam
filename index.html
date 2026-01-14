@@ -358,13 +358,25 @@
 
     /* Stats counter */
     .stat-number {
-      font-size: 3.5rem;
+      font-size: 2rem;
       font-weight: 900;
       background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+    }
+
+    @media (min-width: 640px) {
+      .stat-number {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .stat-number {
+        font-size: 3.5rem;
+      }
     }
 
     /* Process timeline */
@@ -549,13 +561,22 @@
     .specialty-badge {
       display: inline-flex;
       align-items: center;
-      padding: 12px 24px;
+      padding: 8px 16px;
       background: linear-gradient(135deg, rgba(102, 126, 234, 0.2) 0%, rgba(118, 75, 162, 0.2) 100%);
       border: 2px solid rgba(255, 215, 0, 0.3);
       border-radius: 50px;
       font-weight: 600;
-      margin: 8px;
+      margin: 4px;
       transition: all 0.3s ease;
+      font-size: 0.875rem;
+    }
+
+    @media (min-width: 640px) {
+      .specialty-badge {
+        padding: 12px 24px;
+        margin: 8px;
+        font-size: 1rem;
+      }
     }
 
     .specialty-badge:hover {
@@ -636,10 +657,10 @@
     <div id="particles-container"></div>
    </div><!-- Navigation -->
    <nav class="fixed top-0 left-0 right-0 z-50">
-    <div class="max-w-7xl mx-auto px-6 py-5">
+    <div class="max-w-7xl mx-auto px-4 py-4">
      <div class="flex items-center justify-between">
-      <div class="flex items-center space-x-3"><!-- Golden Logo Icon -->
-       <svg class="logo-icon w-12 h-12" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="url(#gold-gradient)" stroke-width="3" /> <path d="M32 12 L32 32 L48 40" stroke="url(#gold-gradient)" stroke-width="3" stroke-linecap="round" /> <circle cx="32" cy="32" r="4" fill="url(#gold-gradient)" /> <defs>
+      <div class="flex items-center space-x-2"><!-- Golden Logo Icon -->
+       <svg class="logo-icon w-10 h-10 md:w-12 md:h-12" viewbox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="30" stroke="url(#gold-gradient)" stroke-width="3" /> <path d="M32 12 L32 32 L48 40" stroke="url(#gold-gradient)" stroke-width="3" stroke-linecap="round" /> <circle cx="32" cy="32" r="4" fill="url(#gold-gradient)" /> <defs>
          <lineargradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
           <stop offset="50%" style="stop-color:#ffed4e;stop-opacity:1" />
@@ -648,53 +669,53 @@
         </defs>
        </svg>
        <div>
-        <div class="text-2xl font-bold logo-text">
+        <div class="text-base md:text-2xl font-bold logo-text leading-tight">
          Dr. Anam Dalawar
         </div>
-        <div class="text-xs text-gray-400 font-medium">
+        <div class="text-xs text-gray-400 font-medium hidden sm:block">
          Physical Therapy Excellence
         </div>
        </div>
       </div>
-      <div class="hidden md:flex space-x-2"><a href="#home" class="nav-link">Home</a> <a href="#about" class="nav-link">About</a> <a href="#services" class="nav-link">Services</a> <a href="#expertise" class="nav-link">Expertise</a> <a href="#testimonials" class="nav-link">Reviews</a> <a href="#contact" class="nav-link">Contact</a>
-      </div><a href="#contact" class="gradient-button text-white px-7 py-3 rounded-full font-semibold text-sm shadow-lg"> Book Consultation </a>
+      <div class="hidden lg:flex space-x-2"><a href="#home" class="nav-link">Home</a> <a href="#about" class="nav-link">About</a> <a href="#services" class="nav-link">Services</a> <a href="#expertise" class="nav-link">Expertise</a> <a href="#testimonials" class="nav-link">Reviews</a> <a href="#contact" class="nav-link">Contact</a>
+      </div><a href="#contact" class="gradient-button text-white px-4 py-2 md:px-7 md:py-3 rounded-full font-semibold text-xs md:text-sm shadow-lg"> Book Now </a>
      </div>
     </div>
    </nav><!-- Hero Section -->
-   <section id="home" class="section-container min-h-screen flex items-center justify-center px-6 pt-32 pb-20">
+   <section id="home" class="section-container min-h-screen flex items-center justify-center px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
     <div class="max-w-7xl mx-auto text-center">
      <div class="fade-in-up visible">
-      <div class="inline-block mb-6 float-animation"><span class="specialty-badge">🏥 Premium Physiotherapy Care</span>
+      <div class="inline-block mb-4 sm:mb-6 float-animation"><span class="specialty-badge text-xs sm:text-base">🏥 Premium Physiotherapy Care</span>
       </div>
-      <h1 id="hero-headline" class="hero-title text-6xl md:text-8xl font-bold mb-6 leading-tight">Transform Your<br><span class="gradient-text-purple">Health Journey</span></h1>
-      <p id="hero-subheadline" class="text-2xl md:text-3xl text-gray-300 mb-6 font-medium">Expert Physiotherapy Care in Lahore</p>
-      <p class="text-lg text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">CEO &amp; Head of Valencia Health Clinic | Specialized in Musculoskeletal Rehabilitation, Sports Injury Recovery &amp; Advanced Pain Management Techniques</p>
-      <div class="flex flex-col sm:flex-row gap-5 justify-center mb-16"><a href="#contact" id="cta-button" class="gradient-button text-white px-10 py-5 rounded-full font-bold text-lg inline-block shadow-2xl"> Book Your Session </a> <a href="#services" class="gradient-button-secondary text-white px-10 py-5 rounded-full font-bold text-lg inline-block shadow-2xl"> Explore Services </a>
+      <h1 id="hero-headline" class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight px-2">Transform Your<br><span class="gradient-text-purple">Health Journey</span></h1>
+      <p id="hero-subheadline" class="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-300 mb-4 sm:mb-6 font-medium px-2">Expert Physiotherapy Care in Lahore</p>
+      <p class="text-sm sm:text-base md:text-lg text-gray-400 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">CEO &amp; Head of Valencia Health Clinic | Specialized in Musculoskeletal Rehabilitation, Sports Injury Recovery &amp; Advanced Pain Management Techniques</p>
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center mb-10 sm:mb-16 px-4"><a href="#contact" id="cta-button" class="gradient-button text-white px-8 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg inline-block shadow-2xl"> Book Your Session </a> <a href="#services" class="gradient-button-secondary text-white px-8 py-4 sm:px-10 sm:py-5 rounded-full font-bold text-base sm:text-lg inline-block shadow-2xl"> Explore Services </a>
       </div><!-- Specialty Badges -->
-      <div class="flex flex-wrap justify-center gap-3 mb-12"><span class="specialty-badge">💪 Sports Rehab</span> <span class="specialty-badge">🦴 Musculoskeletal</span> <span class="specialty-badge">⚕️ Pain Management</span> <span class="specialty-badge">🏃 Post-Injury Recovery</span>
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-2"><span class="specialty-badge text-xs sm:text-sm">💪 Sports Rehab</span> <span class="specialty-badge text-xs sm:text-sm">🦴 Musculoskeletal</span> <span class="specialty-badge text-xs sm:text-sm">⚕️ Pain Management</span> <span class="specialty-badge text-xs sm:text-sm">🏃 Post-Injury</span>
       </div>
      </div><!-- Stats -->
-     <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto">
-      <div class="glass-card p-8 scale-in">
-       <div class="stat-number">
+     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mt-12 sm:mt-16 md:mt-20 max-w-4xl mx-auto px-4">
+      <div class="glass-card p-4 sm:p-6 md:p-8 scale-in">
+       <div class="stat-number text-3xl sm:text-4xl md:text-5xl">
         1000+
        </div>
-       <p class="text-gray-300 mt-3 font-semibold text-lg">Patients Treated</p>
-       <p class="text-gray-500 text-sm mt-1">Successfully recovered</p>
+       <p class="text-gray-300 mt-2 sm:mt-3 font-semibold text-sm sm:text-base md:text-lg">Patients Treated</p>
+       <p class="text-gray-500 text-xs sm:text-sm mt-1">Successfully recovered</p>
       </div>
-      <div class="glass-card p-8 scale-in">
-       <div class="stat-number">
+      <div class="glass-card p-4 sm:p-6 md:p-8 scale-in">
+       <div class="stat-number text-3xl sm:text-4xl md:text-5xl">
         12+
        </div>
-       <p class="text-gray-300 mt-3 font-semibold text-lg">Years Experience</p>
-       <p class="text-gray-500 text-sm mt-1">In clinical practice</p>
+       <p class="text-gray-300 mt-2 sm:mt-3 font-semibold text-sm sm:text-base md:text-lg">Years Experience</p>
+       <p class="text-gray-500 text-xs sm:text-sm mt-1">In clinical practice</p>
       </div>
-      <div class="glass-card p-8 scale-in">
-       <div class="stat-number">
+      <div class="glass-card p-4 sm:p-6 md:p-8 scale-in col-span-2 md:col-span-1">
+       <div class="stat-number text-3xl sm:text-4xl md:text-5xl">
         98%
        </div>
-       <p class="text-gray-300 mt-3 font-semibold text-lg">Success Rate</p>
-       <p class="text-gray-500 text-sm mt-1">Patient satisfaction</p>
+       <p class="text-gray-300 mt-2 sm:mt-3 font-semibold text-sm sm:text-base md:text-lg">Success Rate</p>
+       <p class="text-gray-500 text-xs sm:text-sm mt-1">Patient satisfaction</p>
       </div>
      </div>
     </div>
@@ -823,7 +844,7 @@
        <p class="text-gray-300 leading-relaxed mb-4">Advanced treatment protocols for joint, muscle, and bone conditions. Restore mobility and build lasting strength.</p>
        <div class="text-sm text-gray-500 space-y-1">
         <div>
-         ✓ Joint mobility restoration
+         ��� Joint mobility restoration
         </div>
         <div>
          ✓ Muscle strengthening
@@ -1469,5 +1490,5 @@
       });
     }
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9bdf5432e11dc8f4',t:'MTc2ODQxNjczMC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9bdf78dac6b7c8f4',t:'MTc2ODQxODIzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
